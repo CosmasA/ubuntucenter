@@ -1054,46 +1054,89 @@ textarea.form-control {
 
 /* Resources Section Styling */
 .resources {
-  padding: 16px;
-  background: #f8f9fa;
+  padding: 60px 20px;
+  background-color: #f8f9fa;
 }
 
 .resources .section-title {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
 .resources .section-title h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
   color: #222;
+  font-weight: 700;
 }
 
 .resources .section-title p {
   color: #555;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 /* Features Item Layout */
 .features-item {
   display: flex;
   align-items: center;
-  gap: 20px; /* space between image and text */
-  margin-bottom: 40px;
+  gap: 40px; /* more space between image and text */
+  margin-bottom: 60px;
 }
 
 .features-item .features-img {
-  flex: 0 0 200px; /* fixed width for images */
+  flex: 0 0 250px; /* slightly bigger image */
 }
 
 .features-item .features-img img {
   width: 100%;
-  border-radius: 8px;
+  height: auto;
+  border-radius: 12px;
   object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.features-item .features-img img:hover {
+  transform: scale(1.05);
 }
 
 .features-item .features-text {
   flex: 1;
+}
+
+.features-item .features-text h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.features-item .features-text p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.features-item .features-text ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 15px;
+}
+
+.features-item .features-text ul li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 8px;
+}
+
+.features-item .features-text ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #006f57;
 }
 
 /* Reverse order for zig-zag */
@@ -1101,34 +1144,21 @@ textarea.form-control {
   flex-direction: row-reverse;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .features-item {
-    flex-direction: column;
-    text-align: center;
-  }
-  .features-item.reverse {
-    flex-direction: column;
-  }
-  .features-item .features-img {
-    width: 100%;
-  }
-}
-
-
 /* Buttons */
 .btn-get-started {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 12px 25px;
   background: #006f57;
   color: #fff;
-  border-radius: 6px;
+  border-radius: 8px;
+  font-weight: 600;
   text-decoration: none;
-  transition: background 0.3s;
+  transition: all 0.3s;
 }
 
 .btn-get-started:hover {
   background: #004f3d;
+  transform: translateY(-2px);
 }
 
 /* Responsive Design */
@@ -1137,15 +1167,12 @@ textarea.form-control {
     flex-direction: column;
     text-align: center;
   }
-
   .features-item.reverse {
     flex-direction: column;
   }
-
   .features-text {
     text-align: center;
   }
-
   .features-text ul {
     padding-left: 0;
   }
@@ -1157,11 +1184,11 @@ textarea.form-control {
   }
 
   .resources .section-title h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 
   .features-text h3 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 }
 
