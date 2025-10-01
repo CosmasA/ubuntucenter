@@ -1,5 +1,4 @@
-
-import './App.css'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Topbar from './components/Topbar'
 import Hero from './components/Hero'
 import Footer from './components/Footer'
@@ -8,23 +7,27 @@ import About from './components/About'
 import Contact from './components/Contact'
 import Services from './components/Services'
 import Trainings from './components/Trainings'
-// import Resources from './components/Resources'
+import Resources from './components/Resources'
 import Statistics from './components/Statistics'
+import NotFound from './components/NotFound'
 
 function App() {
   return (
-    <>
+    <Router basename="/ubuntucenter">
       <Topbar />
       <Header />
-      <Hero id="home" />
-      <About id="about" />
-      <Services id="services" />
-      <Trainings id="trainings" />
-      {/* <Resources id="resources" /> */}
-      <Statistics id="statistics" />
-      <Contact id="contact" />
+      <Routes>
+        <Route path="/" element={<Hero id="home" />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/trainings" element={<Trainings />} />
+        <Route path="/resources" element={<Resources />} />
+        <Route path="/statistics" element={<Statistics />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
       <Footer />
-    </>
+    </Router>
   )
 }
 export default App

@@ -32,8 +32,8 @@ function Header() {
         <nav id="navmenu" className={`navmenu ${isOpen ? "open" : ""}`}>
           <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#services">Our Work</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/services">Our Work</a></li>
 
             {/* Dropdown Menu for Trainings */}
             <li
@@ -58,8 +58,8 @@ function Header() {
               )}
             </li>
 
-            <li><a href="#resources">Resources</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="/resources">Resources</a></li>
+            <li><a href="/contact">Contact</a></li>
           </ul>
         </nav>
 
