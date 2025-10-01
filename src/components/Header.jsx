@@ -32,8 +32,8 @@ function Header() {
         <nav id="navmenu" className={`navmenu ${isOpen ? "open" : ""}`}>
           <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/services">Our Work</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Our Work</a></li>
 
             {/* Dropdown Menu for Trainings */}
             <li
@@ -50,16 +50,16 @@ function Header() {
               </button>
               {showDropdown && (
                 <ul className="dropdown-menu">
-                  <li><a href="#robotics">Robotics Training</a></li>
-                  <li><a href="#ai-skills">AI Skills Training</a></li>
-                  <li><a href="#ai-ethics">AI Ethics & Governance</a></li>
-                  <li><a href="#ai-tools">AI Tools Applications</a></li>
+                  <li><a href="/robotics">Robotics Training</a></li>
+                  <li><a href="/ai-skills">AI Skills Training</a></li>
+                  <li><a href="/ai-ethics">AI Ethics & Governance</a></li>
+                  <li><a href="/ai-tools">AI Tools Applications</a></li>
                 </ul>
               )}
             </li>
 
-            <li><a href="/resources">Resources</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
 

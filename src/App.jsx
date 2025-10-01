@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import './App.css'
 import Topbar from './components/Topbar'
 import Hero from './components/Hero'
 import Footer from './components/Footer'
@@ -9,25 +9,24 @@ import Services from './components/Services'
 import Trainings from './components/Trainings'
 import Resources from './components/Resources'
 import Statistics from './components/Statistics'
-import NotFound from './components/NotFound'
 
 function App() {
   return (
-    <Router basename="/ubuntucenter">
+    <>
       <Topbar />
       <Header />
-      <Routes>
-        <Route path="/" element={<Hero id="home" />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/trainings" element={<Trainings />} />
-        <Route path="/resources" element={<Resources />} />
-        <Route path="/statistics" element={<Statistics />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <main>
+        <section id="home"><Hero /></section>
+        <section id="about"><About /></section>
+        <section id="services"><Services /></section>
+        <section id="trainings"><Trainings /></section>
+        <section id="resources"><Resources /></section>
+        <section id="statistics"><Statistics /></section>
+        <section id="contact"><Contact /></section>
+      </main>
       <Footer />
-    </Router>
+    </>
   )
 }
+
 export default App
