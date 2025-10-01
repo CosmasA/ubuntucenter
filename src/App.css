@@ -658,11 +658,10 @@ a {
   }
 }
 
-
 /* Trainings Section */
 
 .trainings-section {
-  padding: 60px 20px;
+  padding: 16px;
   background: #f9f9f9;
 }
 
@@ -1055,7 +1054,7 @@ textarea.form-control {
 
 /* Resources Section Styling */
 .resources {
-  padding: 60px 20px;
+  padding: 16px;
   background: #f8f9fa;
 }
 
@@ -1079,61 +1078,43 @@ textarea.form-control {
 .features-item {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-  margin-bottom: 60px;
-  flex-wrap: wrap;
+  gap: 20px; /* space between image and text */
+  margin-bottom: 40px;
 }
 
-/* Reverse layout */
+.features-item .features-img {
+  flex: 0 0 200px; /* fixed width for images */
+}
+
+.features-item .features-img img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.features-item .features-text {
+  flex: 1;
+}
+
+/* Reverse order for zig-zag */
 .features-item.reverse {
   flex-direction: row-reverse;
 }
 
-/* Text */
-.features-text {
-  flex: 1;
-  min-width: 280px;
+/* Responsive */
+@media (max-width: 768px) {
+  .features-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  .features-item.reverse {
+    flex-direction: column;
+  }
+  .features-item .features-img {
+    width: 100%;
+  }
 }
 
-.features-text h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: #006f57;
-}
-
-.features-text p {
-  margin-bottom: 15px;
-  color: #444;
-  line-height: 1.6;
-}
-
-.features-text ul {
-  margin-bottom: 15px;
-  padding-left: 20px;
-}
-
-.features-text ul li {
-  margin-bottom: 8px;
-  color: #333;
-  list-style: none;
-}
-
-/* Image */
-.features-img {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.features-img img {
-  max-width: 350px;
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
 
 /* Buttons */
 .btn-get-started {
@@ -1182,51 +1163,6 @@ textarea.form-control {
   .features-text h3 {
     font-size: 1.2rem;
   }
-}
-
-/* 404 Not Found Page */
-.notfound {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background: #f8f9fa;
-  color: #333;
-  padding: 20px;
-}
-
-.notfound h1 {
-  font-size: 6rem;
-  font-weight: bold;
-  color: #006f57;
-  margin-bottom: 10px;
-}
-
-.notfound h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-}
-
-.notfound p {
-  margin-bottom: 20px;
-  font-size: 1.1rem;
-  color: #666;
-}
-
-.btn-home {
-  display: inline-block;
-  padding: 10px 20px;
-  background: #006f57;
-  color: #fff;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-
-.btn-home:hover {
-  background: #004f3d;
 }
 
 /* Footer Base */
