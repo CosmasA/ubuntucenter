@@ -1,5 +1,5 @@
 import pdfIcon from "../assets/img/pdf.png";
-import aiLetter from "../assets/img/ai-letter.png";
+import aiLetter from "../assets/img/ai_news.png";
 import ethicalAI from "../assets/img/ethical.jpg";
 
 const Resources = () => {
