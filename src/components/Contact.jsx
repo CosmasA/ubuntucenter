@@ -53,8 +53,8 @@ function Contact() {
                 <div className="info-item" data-aos="fade" data-aos-delay="300">
                   <i className="bi bi-telephone"></i>
                   <h3>Call Us</h3>
-                  <p>+256 775 123 456</p>
-                  <p>+256 705 123 456</p>
+                  <p>+256 775 827 420</p>
+                  <p>+256 750 149 448</p>
                 </div>
               </div>
 
@@ -63,7 +63,7 @@ function Contact() {
                   <i className="bi bi-envelope"></i>
                   <h3>Email Us</h3>
                   <p>info@ubuntuaiafrica.org</p>
-                  <p>contact@example.com</p>
+                  <p>info@ubuntucenter4ai.com</p>
                 </div>
               </div>
 

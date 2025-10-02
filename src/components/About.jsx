@@ -1,72 +1,76 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { FaBuilding, FaClipboardList, FaUsers, FaChartLine } from "react-icons/fa";
+import { FaBullseye, FaEye, FaFlag } from "react-icons/fa";
+import aboutImg from "../assets/img/about_ai.png";
 
 function About() {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // animation duration (ms)
-      once: true,     // animate only once when scrolled into view
+      duration: 1000, 
+      once: true,     
     });
   }, []);
 
   return (
     <section id="about" className="about section">
       <div className="container">
-        <div className="about-text" data-aos="fade-up">
+        {/* Section Header */}
+        <div 
+          className="about-text" 
+          data-aos="fade-up" 
+          data-aos-delay="100" 
+          data-aos-duration="1200"
+        >
           <h2>Who We Are</h2>
           <p>
-            <strong>Ubuntu Centre for AI Governance and Innovation</strong> is a
-            pan-African think-and-do tank shaping Africa’s digital future by
-            building accountable, human-centred AI ecosystems.
-          </p>
-          <p>
-            We partner with governments, institutions, and communities to
-            co-create policies, build talent, and design technologies that
-            reflect African values and aspirations.
+            <strong>Ubuntu Centre for AI Governance and Innovation (UC4AGI)</strong> 
+            is dedicated to advancing responsible AI governance and innovation 
+            across Africa. We shape ethical policies, build local capacity, 
+            and deploy inclusive technologies that reflect African values.
           </p>
         </div>
 
-                {/* Right Side Feature Cards */}
-        <div className="about-cards">
-          <div className="about-card">
-            <FaBuilding className="icon" />
-            <h4>Policy & Governance</h4>
-            <p>
-              We collaborate with African governments and institutions to
-              develop ethical, transparent AI policies and regulatory
-              frameworks.
-            </p>
-          </div>
+        {/* Mission, Vision, Goal + Image Card */}
+          <div className="about-cards">
+            {/* Image Card */}
+            <div className="about-card" data-aos="fade-up" data-aos-delay="100">
+              <img 
+                src={aboutImg} 
+                alt="AI in Africa illustration" 
+                className="about-card-img"
+              />
+            </div>
+            <div className="about-card" data-aos="fade-up" data-aos-delay="200">
+              <FaBullseye className="icon" />
+              <h4>Mission</h4>
+              <p>
+                To advance responsible AI governance and innovation in Africa by 
+                building local capacity, shaping ethical policies, and deploying 
+                inclusive technologies that drive equity, resilience, and sustainable development.
+              </p>
+            </div>
 
-          <div className="about-card">
-            <FaClipboardList className="icon" />
-            <h4>Responsible Innovation</h4>
-            <p>
-              Our work ensures AI systems are inclusive, fair, and designed with
-              accountability at their core.
-            </p>
-          </div>
+            <div className="about-card" data-aos="fade-up" data-aos-delay="300">
+              <FaEye className="icon" />
+              <h4>Vision</h4>
+              <p>
+                A future where Africa drives innovative and trustworthy AI that upholds 
+                human rights, empowers people, and delivers transformative solutions 
+                to global challenges.
+              </p>
+            </div>
 
-          <div className="about-card">
-            <FaUsers className="icon" />
-            <h4>Capacity Building</h4>
-            <p>
-              We train and empower the next generation of African AI
-              practitioners and leaders.
-            </p>
+            <div className="about-card" data-aos="fade-up" data-aos-delay="400">
+              <FaFlag className="icon" />
+              <h4>Goal</h4>
+              <p>
+                To catalyze and nurture African local AI talent, foster indigenous 
+                innovation ecosystems, and promote AI applications that address 
+                societal needs while upholding ubuntu human values.
+              </p>
+            </div>
           </div>
-
-          <div className="about-card">
-            <FaChartLine className="icon" />
-            <h4>Impact & Growth</h4>
-            <p>
-              We measure and scale AI solutions that address African challenges
-              while creating sustainable opportunities for all.
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   );
