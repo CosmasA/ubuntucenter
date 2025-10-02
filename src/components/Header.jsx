@@ -20,20 +20,26 @@ function Header() {
     setShowDropdown((prev) => !prev);
   };
 
+  // ✅ Close menu when link is clicked
+  const handleLinkClick = () => {
+    setIsOpen(false);
+    setShowDropdown(false);
+  };
+
   return (
     <header id="header" className={`header ${scrolled ? "scrolled" : ""}`}>
       <div className="header-container">
         {/* Logo */}
-        <a href="/" className="logo d-flex align-items-center me-auto me-xl-0">
+        <a href="/" className="logo d-flex align-items-center me-auto me-xl-0" onClick={handleLinkClick}>
           <h1 className="sitename">UC4AGI</h1>
         </a>
 
         {/* Navigation */}
         <nav id="navmenu" className={`navmenu ${isOpen ? "open" : ""}`}>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#services">Our Work</a></li>
+            <li><a href="/" onClick={handleLinkClick}>Home</a></li>
+            <li><a href="#about" onClick={handleLinkClick}>About Us</a></li>
+            <li><a href="#services" onClick={handleLinkClick}>Our Work</a></li>
 
             {/* Dropdown Menu for Trainings */}
             <li
@@ -50,21 +56,21 @@ function Header() {
               </button>
               {showDropdown && (
                 <ul className="dropdown-menu">
-                  <li><a href="/robotics">Robotics Training</a></li>
-                  <li><a href="/ai-skills">AI Skills Training</a></li>
-                  <li><a href="/ai-ethics">AI Ethics & Governance</a></li>
-                  <li><a href="/ai-tools">AI Tools Applications</a></li>
+                  <li><a href="/robotics" onClick={handleLinkClick}>Robotics Training</a></li>
+                  <li><a href="/ai-skills" onClick={handleLinkClick}>AI Skills Training</a></li>
+                  <li><a href="/ai-ethics" onClick={handleLinkClick}>AI Ethics & Governance</a></li>
+                  <li><a href="/ai-tools" onClick={handleLinkClick}>AI Tools Applications</a></li>
                 </ul>
               )}
             </li>
 
-            <li><a href="#resources">Resources</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#resources" onClick={handleLinkClick}>Resources</a></li>
+            <li><a href="#contact" onClick={handleLinkClick}>Contact</a></li>
           </ul>
         </nav>
 
         {/* Call to action button */}
-        <a className="btn-getstarted" href="#register">Register</a>
+        <a className="btn-getstarted" href="#register" onClick={handleLinkClick}>Register</a>
 
         {/* Mobile toggle button */}
         <button

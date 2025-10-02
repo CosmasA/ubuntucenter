@@ -62,7 +62,6 @@ function Contact() {
                 <div className="info-item" data-aos="fade" data-aos-delay="400">
                   <i className="bi bi-envelope"></i>
                   <h3>Email Us</h3>
-                  <p>info@ubuntuaiafrica.org</p>
                   <p>info@ubuntucenter4ai.com</p>
                 </div>
               </div>

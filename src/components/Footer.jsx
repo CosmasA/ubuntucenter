@@ -24,7 +24,7 @@ function Footer() {
           <p>
             <strong>Phone:</strong>+256775827420 & +256750149448<br />
             <strong>Email:</strong>{" "}
-            <a href="mailto:info@ubuntucentre.org">info@ubuntucentre.org</a>
+            <a href="mailto:info@ubuntucenter4ai.com">info@ubuntucenter4ai.com</a>
           </p>
         </div>
 
