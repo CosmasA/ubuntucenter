@@ -9,6 +9,7 @@ import Services from './components/Services'
 import Trainings from './components/Trainings'
 import Resources from './components/Resources'
 import Statistics from './components/Statistics'
+import Scroll from './components/Scroll'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <section id="resources"><Resources /></section>
         <section id="statistics"><Statistics /></section>
         <section id="contact"><Contact /></section>
+        <section id="scroll"><Scroll /></section>
       </main>
       <Footer />
     </>

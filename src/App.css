@@ -85,6 +85,13 @@
   color: #ffcc00;
 }
 
+.contact-info {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 15px;       
+  font-style: normal;
+}
+
 /* Responsive behavior */
 @media (max-width: 768px) {
   #topbar {
@@ -113,6 +120,10 @@
     height: 2rem;
     width: 2rem;
     border-radius: 50%;
+  }
+  .contact-info {
+    justify-content: center; 
+    text-align: center;      
   }
 }
 
@@ -445,7 +456,7 @@ a {
 /* About Section */
 .about {
   padding: 1rem;
-  background: #fff;
+  background: #f8f9fa;
 }
 
 .about-text .btn {
@@ -559,6 +570,7 @@ a {
 
 .services {
   padding: 16px;
+  background: #f8f9fa;
 }
 
 .services .row {
@@ -673,102 +685,92 @@ a {
 }
 
 /* Trainings Section */
-
 .trainings-section {
   padding: 16px;
-  background: #f9f9f9;
+  background: #f8f9fa;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .section-title h2 {
   font-size: 2rem;
+  font-weight: bold;
+  color: #1b9c85;
   margin-bottom: 10px;
-  text-align: center;
 }
 
 .section-title p {
-  text-align: center;
   color: #555;
-  margin-bottom: 40px;
+  font-size: 1rem;
 }
 
+/* Form Container */
 .trainings-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  justify-content: center;
-}
-
-.trainings-list {
-  flex: 1;
-  min-width: 300px;
-}
-
-.training-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  max-width: 700px;
+  margin: 0 auto;
   background: #fff;
-  padding: 15px 20px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.training-links .btn {
-  margin-left: 10px;
-  padding: 6px 12px;
-  border: none;
-  border-radius: 4px;
-  text-decoration: none;
-  color: #fff;
-  cursor: pointer;
-}
-
-.btn-register {
-  background-color: #1b9c85;
-}
-
-.btn-pay {
-  background-color: #0f4c75;
-}
-
-.training-form {
-  flex: 1;
-  min-width: 300px;
-  background: #fff;
-  padding: 20px 25px;
+  padding: 25px 30px;
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0px 6px 18px rgba(0,0,0,0.1);
 }
 
+/* Input and Select Fields */
+.training-form input,
+.training-form select {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 18px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 15px;
+  outline: none;
+  transition: border 0.2s ease-in-out;
+}
+
+.training-form input:focus,
+.training-form select:focus {
+  border-color: #1b9c85;
+  box-shadow: 0 0 6px rgba(27,156,133,0.2);
+}
+
+/* Row Layout */
 .training-form .form-row {
   display: flex;
   gap: 15px;
-  margin-bottom: 15px;
-  flex-wrap: wrap;
 }
 
-.training-form input {
+.training-form .form-row input {
   flex: 1;
-  padding: 10px 15px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
 }
 
+/* Button */
 .btn-cta {
-  background-color: #1b9c85;
-  color: #fff;
-  padding: 12px 20px;
   width: 100%;
+  padding: 14px;
+  background: #1b9c85;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
+  transition: background 0.3s ease-in-out;
 }
 
 .btn-cta:hover {
-  background-color: #004d3d;
+  background: #006f57;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .training-form .form-row {
+    flex-direction: column;
+  }
+}
+
 
 /* Contact Section */
 .contact.section {
@@ -928,7 +930,7 @@ textarea.form-control {
 }
 
 .php-email-form button[type="submit"]:hover {
-  background-color: #1b9c85;
+  background-color: #006f57;
 }
 
 .php-email-form button[type="submit"]:disabled {
@@ -1206,6 +1208,31 @@ textarea.form-control {
     font-size: 1.4rem;
   }
 }
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #1b9c85;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  transition: background 0.3s, transform 0.3s;
+  z-index: 1000;
+}
+
+.scroll-to-top:hover {
+  background: #095f4f;
+  transform: scale(1.1);
+}
+
+
+/* Footer Styling */
 
 .footer {
   background: #0f4c75;

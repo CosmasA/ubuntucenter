@@ -9,33 +9,14 @@ const Trainings = () => {
     city: "",
     district: "",
     state: "",
+    course: "",   // ✅ add course field
   });
 
   const trainingsList = [
-    {
-      id: 1,
-      title: "Robotics Training",
-      registerLink: "#",
-      payLink: "#",
-    },
-    {
-      id: 2,
-      title: "AI Governance",
-      registerLink: "#",
-      payLink: "#",
-    },
-    {
-      id: 3,
-      title: "AI Ethics",
-      registerLink: "#",
-      payLink: "#",
-    },
-    {
-      id: 4,
-      title: "AI Innovation",
-      registerLink: "#",
-      payLink: "#",
-    },
+    { id: 1, title: "Robotics Training", registerLink: "#", payLink: "#" },
+    { id: 2, title: "AI Governance", registerLink: "#", payLink: "#" },
+    { id: 3, title: "AI Ethics", registerLink: "#", payLink: "#" },
+    { id: 4, title: "AI Innovation", registerLink: "#", payLink: "#" },
   ];
 
   const handleChange = (e) => {
@@ -46,7 +27,7 @@ const Trainings = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form Submitted:", formData);
-    alert("Your registration has been submitted. Thank you!");
+    alert(`You registered for: ${formData.course}`);
     setFormData({
       firstName: "",
       lastName: "",
@@ -55,6 +36,7 @@ const Trainings = () => {
       city: "",
       district: "",
       state: "",
+      course: "",
     });
   };
 
@@ -62,23 +44,14 @@ const Trainings = () => {
     <section id="trainings" className="trainings-section">
       <div className="container section-title">
         <h2>Trainings</h2>
-        <p>Register for upcoming trainings on Robotics, AI governance, ethics, and innovation.</p>
+        <p>
+          Register for upcoming trainings on Robotics, AI governance, ethics, and innovation.
+        </p>
       </div>
 
       <div className="container trainings-container">
-        <div className="trainings-list">
-          <h3>Available Courses</h3>
-          {trainingsList.map((training) => (
-            <div key={training.id} className="training-item">
-              <span>{training.title}</span>
-              <div className="training-links">
-                <a href={training.registerLink} className="btn btn-register">Register</a>
-                <a href={training.payLink} className="btn btn-pay">Pay</a>
-              </div>
-            </div>
-          ))}
-        </div>
 
+        {/* Registration form */}
         <form className="training-form" onSubmit={handleSubmit}>
           <div className="form-row">
             <input
@@ -143,6 +116,21 @@ const Trainings = () => {
               required
             />
           </div>
+
+          {/* ✅ Course select dropdown */}
+          <select
+            name="course"
+            value={formData.course}
+            onChange={handleChange}
+            required
+          >
+            <option value="">-- Select a Course --</option>
+            {trainingsList.map((training) => (
+              <option key={training.id} value={training.title}>
+                {training.title}
+              </option>
+            ))}
+          </select>
 
           <button type="submit" className="btn btn-cta">
             Register & Pay
