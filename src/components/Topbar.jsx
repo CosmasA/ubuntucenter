@@ -29,7 +29,7 @@ function Topbar() {
           <span>📍 Kampala, Uganda</span>{"  "}&nbsp;&nbsp;&nbsp;
           <span>🕒 Mon–Fri 8:00–17:00</span>{" "}&nbsp;
           <a href="mailto:info@ubuntuaiafrica.org">📧 info@ubuntucenter4ai.com</a>&nbsp;&nbsp;
-          <a href="tel:+256775827420">📞 +256775827420 & +256750149448</a>
+          <span>📞 +256775827420 & +256750149448</span>
         </em>
       </address>
     </div>
