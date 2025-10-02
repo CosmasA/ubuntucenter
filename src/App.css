@@ -1072,8 +1072,8 @@ textarea.form-control {
 
 /* Resources Section Styling */
 .resources {
-  padding: 60px 20px;
-  background-color: #f8f9fa;
+  padding: 16px;
+  background: #f8f9fa;
 }
 
 .resources .section-title {
@@ -1166,7 +1166,7 @@ textarea.form-control {
 .btn-get-started {
   display: inline-block;
   padding: 12px 25px;
-  background: #006f57;
+  background: #1b9c85;
   color: #fff;
   border-radius: 8px;
   font-weight: 600;
@@ -1175,7 +1175,7 @@ textarea.form-control {
 }
 
 .btn-get-started:hover {
-  background: #004f3d;
+  background: #006f57;
   transform: translateY(-2px);
 }
 
