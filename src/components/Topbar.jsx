@@ -9,7 +9,7 @@ function Topbar() {
       {/* Brand */}
       <div className="brand">
         <a
-          href="/"
+          href="/ubuntucenter/"
           className="brand-link"
           aria-label="Ubuntu Centre for AI Africa homepage"
         >

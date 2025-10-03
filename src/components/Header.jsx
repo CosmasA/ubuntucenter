@@ -30,14 +30,14 @@ function Header() {
     <header id="header" className={`header ${scrolled ? "scrolled" : ""}`}>
       <div className="header-container">
         {/* Logo */}
-        <a href="/" className="logo d-flex align-items-center me-auto me-xl-0" onClick={handleLinkClick}>
+        <a href="/ubuntucenter/" className="logo d-flex align-items-center me-auto me-xl-0" onClick={handleLinkClick}>
           <h1 className="sitename">UC4AGI</h1>
         </a>
 
         {/* Navigation */}
         <nav id="navmenu" className={`navmenu ${isOpen ? "open" : ""}`}>
           <ul>
-            <li><a href="/" onClick={handleLinkClick}>Home</a></li>
+            <li><a href="/ubuntucenter/" onClick={handleLinkClick}>Home</a></li>
             <li><a href="#about" onClick={handleLinkClick}>About Us</a></li>
             <li><a href="#services" onClick={handleLinkClick}>Our Work</a></li>
 
