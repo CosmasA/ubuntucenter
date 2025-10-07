@@ -26,10 +26,10 @@ function Topbar() {
       {/* Contact Details */}
       <address className="top-contacts" aria-label="Contact details">
         <em className="contact-info">
-          <span>📍 Kampala, Uganda</span>{"  "}&nbsp;&nbsp;&nbsp;
-          <span>🕒 Mon–Fri 8:00–17:00</span>{" "}&nbsp;
-          <a href="mailto:info@ubuntuaiafrica.org">📧 info@ubuntucenter4ai.com</a>&nbsp;&nbsp;
-          <span>📞 +256775827420 & +256750149448</span>
+          <span>📍 Kampala, Uganda</span>{"  "}
+          <span>🕒 Mon–Fri 8:00–17:00</span>{" "}
+          <a href="mailto:info@ubuntucenter4ai.org">📧 info@ubuntucenter4ai.org</a>{" "}
+          <span>📞 +256775827420 | +256750149448</span>
         </em>
       </address>
     </div>
