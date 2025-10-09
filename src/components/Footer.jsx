@@ -22,9 +22,9 @@ function Footer() {
         <div className="footer-col">
           <h4>Contact Us</h4>
           <p>
-            <strong>Phone:</strong>+256775827420 & +256750149448<br />
+            <strong>Phone:</strong> +256775827420 & +256750149448<br />
             <strong>Email:</strong>{" "}
-            <a href="mailto:info@ubuntucenter4ai.com">info@ubuntucenter4ai.org</a>
+            <a href="mailto:info@ubuntucenter4ai.org">info@ubuntucenter4ai.org</a>
           </p>
         </div>
 
@@ -37,6 +37,25 @@ function Footer() {
             <li><a href="#services">Services</a></li>
             <li><a href="#trainings">Trainings</a></li>
           </ul>
+        </div>
+
+        {/* Social Media */}
+        <div className="footer-col">
+          <h4>Follow Us</h4>
+          <div className="social-links">
+            <a href="https://x.com" aria-label="X" title="X">
+              𝕏
+            </a>
+            <a href="https://facebook.com" aria-label="Facebook">
+              <i className="bi bi-facebook"></i>
+            </a>
+            <a href="https://linkedin.com" aria-label="LinkedIn">
+              <i className="bi bi-linkedin"></i>
+            </a>
+            <a href="https://instagram.com" aria-label="Instagram">
+              <i className="bi bi-instagram"></i>
+            </a>
+          </div>
         </div>
       </div>
 

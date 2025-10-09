@@ -1,16 +1,25 @@
 import { useState, useEffect } from "react";
-import "../App.css";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false); 
   const [scrolled, setScrolled] = useState(false); 
   const [showDropdown, setShowDropdown] = useState(false);
+  const [isPastTopbar, setIsPastTopbar] = useState(false);
 
-  // Handle scroll background effect
+  // Handle scroll background effect and topbar detection
   useEffect(() => {
     const handleScroll = () => {
+      const topbar = document.getElementById('topbar');
+      const topbarHeight = topbar ? topbar.offsetHeight : 0;
+      
+      // Check if scrolled past topbar
+      setIsPastTopbar(window.scrollY > topbarHeight);
+      
+      // Check if scrolled for background effect
       setScrolled(window.scrollY > 50);
     };
+
+    handleScroll(); // Run on mount
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -20,17 +29,24 @@ function Header() {
     setShowDropdown((prev) => !prev);
   };
 
-  // ✅ Close menu when link is clicked
+  // Close menu when link is clicked
   const handleLinkClick = () => {
     setIsOpen(false);
     setShowDropdown(false);
   };
 
   return (
-    <header id="header" className={`header ${scrolled ? "scrolled" : ""}`}>
+    <header 
+      id="header" 
+      className={`header ${scrolled ? "scrolled" : ""} ${isPastTopbar ? "header-fixed" : ""}`}
+    >
       <div className="header-container">
         {/* Logo */}
-        <a href="/ubuntucenter/" className="logo d-flex align-items-center me-auto me-xl-0" onClick={handleLinkClick}>
+        <a 
+          href="/ubuntucenter/" 
+          className="logo d-flex align-items-center me-auto me-xl-0" 
+          onClick={handleLinkClick}
+        >
           <h1 className="sitename">UC4AGI</h1>
         </a>
 
